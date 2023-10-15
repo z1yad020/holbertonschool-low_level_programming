@@ -1,7 +1,9 @@
 #include <stdio.h>
-/** void: noting
- *  puts: similar to printf
- * Return: finish of program with succed
+/**
+* main: entry point
+* void: noting
+* puts: similar to printf
+* Return: finish of program with succed
 */
 int main(void)
 {
