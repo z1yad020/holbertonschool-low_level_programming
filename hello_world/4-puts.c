@@ -2,7 +2,7 @@
 /**
  * main - Makes the sum of two numbers
  * void: First operand
- * 
+ *
  *
  * Description: This is a longer description.
  * Don't forget that a line should not exceed 80 characters.
