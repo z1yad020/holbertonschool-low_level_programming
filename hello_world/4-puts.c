@@ -1,15 +1,8 @@
 #include <stdio.h>
 /**
-* main: entry point
-* void: noting
-* puts: similar to printf
-
-* Return: finish of program with succed
-*/
-/**
- * op_add - Makes the sum of two numbers
- * @arg1: First operand
- * @arg2: Second operand
+ * main - Makes the sum of two numbers
+ * void: First operand
+ * 
  *
  * Description: This is a longer description.
  * Don't forget that a line should not exceed 80 characters.
