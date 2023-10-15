@@ -1,9 +1,9 @@
-/* Description: task 4 */
 #include <stdio.h>
 /**
 * main: entry point
 * void: noting
 * puts: similar to printf
+
 * Return: finish of program with succed
 */
 int main(void)
