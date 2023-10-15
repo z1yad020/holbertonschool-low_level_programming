@@ -1,6 +1,6 @@
+/* Description: task 4 */
 #include <stdio.h>
 /**
-* Description: tsk4
 * main: entry point
 * void: noting
 * puts: similar to printf
