@@ -16,18 +16,17 @@
 int main(void)
 {
 
-	int i;
+	int i, j;
 
-	for (i = '0'; i <= '9'; i++)
+	for (i = 0, j = '0'; i <= 9; i++, j++)
 	{
-		putchar(i);
+		putchar(j);
+		if (i != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
-
-	for (i = 'a'; i <= 'f'; i++)
-	{
-		putchar(i);
-	}
-	putchar('\n');
 
 	return (0);
 }
