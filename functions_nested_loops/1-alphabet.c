@@ -1,20 +1,5 @@
 #include "main.h"
 /**
- * main - entry piont
- *
- * Description: print alphabet
- *
- * print_alphabet: printing a line of
- * alphabet
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-
-
-
-
-
-/**
  * print_alphabet - printing
  * letters
  *
@@ -22,7 +7,7 @@
  *
  * Return: void
  */
-void print_alphabet()
+void print_alphabet(void)
 {
 	char letter;
 
@@ -30,4 +15,5 @@ void print_alphabet()
 	{
 		_putchar(letter);
 	}
+	_putchar('\n');
 }
