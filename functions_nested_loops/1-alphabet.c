@@ -10,11 +10,11 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-void print_alphabet(void);
+
 
 int main(void)
 {
-	print_alphabet();
+	
 	return (0);
 }
 
@@ -26,7 +26,7 @@ int main(void)
  *
  * Return: void
  */
-void print_alphabet(void)
+void print_alphabet()
 {
 	char letter;
 
