@@ -18,11 +18,11 @@ void times_table(void)
 	{
 		for (j = 0; j < 10; j++)
 			if (j != 9 && j != 0)
-				printf("%3d, ", i * j);
+				printf("%2d, ", i * j);
 			else if (j == 0)
-				printf("%d", i * j);
+				printf("0,  ");
 			else
-				printf("%3d", i * j);
+				printf("%2d", i * j);
 		printf("\n");
 	}
 }
