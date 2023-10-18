@@ -13,7 +13,7 @@
  */
 int add(int x, int y)
 {
-	long long int c = x + y;
+	int c = x + y;
 
 	return (c);
 }
