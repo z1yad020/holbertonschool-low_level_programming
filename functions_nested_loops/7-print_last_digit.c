@@ -14,8 +14,7 @@ int print_last_digit(int n)
 {
 	int x = abs(n % 10);
 
-	printf("%i", x);
-
+	_putchar(x + '0');
 
 	return (x);
 }
