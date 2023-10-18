@@ -12,5 +12,6 @@
  */
 int _abs(int n)
 {
-	printf("%d\n", abs(n));
+	int x = abs(n);
+	printf("%i\n", x);
 }
