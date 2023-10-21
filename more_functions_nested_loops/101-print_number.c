@@ -10,7 +10,7 @@
  */
 void print_number(int n)
 {
-	int tmp1 = n, tmp2;
+	int tmp1 = n, tmp2 = 0;
 
 	if (n < 0)
 	{
