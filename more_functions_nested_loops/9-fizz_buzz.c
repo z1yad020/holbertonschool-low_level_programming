@@ -3,12 +3,12 @@
 #include <ctype.h>
 
 /**
- * FizzBuzz_test - fizz buzz
+ * main - fizz buzz
  *
  *
  * Return: void.
  */
-void FizzBuzz_test(void)
+void main(void)
 {
 	int i;
 
