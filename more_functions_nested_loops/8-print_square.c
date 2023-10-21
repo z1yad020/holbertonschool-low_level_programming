@@ -8,7 +8,7 @@
  *
  * Return: void.
  */
-void print_diagonal(int n)
+void print_square(int n)
 {
 	int i, j;
 
