@@ -9,19 +9,26 @@
  */
 void more_numbers(void)
 {
-	int i, j = 10;
+	int i, j = 10, x = 2;
 
 	while (j--)
 	{
-		for (i = 0; i < 15; i++)
+		while (x--)
 		{
-			if (i < 9)
+			for (i = 0; i < 10; i++)
 			{
-				_putchar(i + '0');
-				continue;
+				if (x == 0 && i == 5)
+					break;
+
+
+				if (x == 0)
+					putchar('1');
+
+
+				putchar(i + '0');
 			}
-			_putchar(i - 10 + '0');
 		}
-		_putchar('\n');
+		putchar('\n');
+		x = 2;
 	}
 }
