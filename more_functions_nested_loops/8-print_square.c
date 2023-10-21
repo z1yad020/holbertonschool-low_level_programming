@@ -3,7 +3,7 @@
 #include <ctype.h>
 
 /**
- * rint_square - print square
+ * print_square - print square
  * @n: line count
  *
  * Return: void.
@@ -17,7 +17,9 @@ void print_square(int n)
 		for (i = 0; i < n; i++)
 		{
 			for (j = 0; j < n; j++)
+			{
 				_putchar('#');
+			}
 			putchar('\n');
 		}
 	}
