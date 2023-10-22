@@ -11,3 +11,4 @@ void print_square(int);
 void FizzBuzz_test(void);
 void print_triangle(int);
 void print_number(int);
+double pow(double, double);
