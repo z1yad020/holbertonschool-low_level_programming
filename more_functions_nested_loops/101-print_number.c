@@ -23,6 +23,8 @@ void print_number(int n)
 	else
 		tmp = n;
 
+	pow(10, 2);
+
 	if (tmp != 0)
 		while (tmp != 0)
 		{
@@ -37,6 +39,6 @@ void print_number(int n)
 	else
 		tmp = n;
 
-	for (j = i - 1; j >= 0; j--)
-		_putchar(tmp / (int)(pow(10, j)) % 10 + '0');
+	/*for (j = i - 1; j >= 0; j--)*/
+		/*_putchar(tmp / (int)(pow(10, j)) % 10 + '0');*/
 }
