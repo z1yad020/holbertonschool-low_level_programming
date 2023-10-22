@@ -2,6 +2,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <ctype.h>
+#include <math.h>
 
 /**
  * print_number - print char digit
