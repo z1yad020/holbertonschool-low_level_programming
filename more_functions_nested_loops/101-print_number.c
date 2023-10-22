@@ -1,3 +1,4 @@
+#include <limits.h>
 #include "main.h"
 #include <stdio.h>
 #include <ctype.h>
@@ -10,23 +11,31 @@
  */
 void print_number(int n)
 {
-	int tmp1 = n, tmp2 = 0;
+	unsigned int tmp;
+	int i = 0, j = 0;
 
 	if (n < 0)
 	{
+		tmp = n * -1;
 		_putchar('-');
-		tmp1 *= -1;
 	}
+	else
+		tmp = n;
 
-	while (tmp1 != 0)
-	{
-		tmp2 = (tmp1 % 10) + (10 * tmp2);
-		tmp1 /= 10;
-	}
+	if (tmp != 0)
+		while (tmp != 0)
+		{
+			tmp /= 10;
+			i++;
+		}
+	else
+		i = 1;
 
-	while (tmp2 != 0)
-	{
-		_putchar((tmp2 % 10) + '0');
-		tmp2 /= 10;
-	}
+	if (n < 0)
+		tmp = n * -1;
+	else
+		tmp = n;
+
+	for (j = i - 1; j >= 0; j--)
+		_putchar(tmp / (int)(pow(10, j)) % 10 + '0');
 }
