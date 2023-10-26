@@ -11,8 +11,8 @@
 
 void print_rev(char *s)
 {
-	int i;
+	int i, x = sizeof(s), y = sizeof(s[0]);
 
-	for (i = sizeof(s) / sizeof(s[0]) - 1; i >= 0; i--)
+	for (i = x / y - 1; i >= 0; i--)
 		_putchar(s[i]);
 }
