@@ -11,8 +11,11 @@
 
 void print_rev(char *s)
 {
-	int i, x = sizeof(s), y = sizeof(char);
+	int i = 0, j = 0;
 
-	for (i = x / y - 1; i >= 0; i--)
-		_putchar(s[i]);
+	while (*(s + i++) != '\0')
+		j++;
+
+	while (j >= 0)
+		printf("%c", *(s + j--));
 }
