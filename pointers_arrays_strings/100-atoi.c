@@ -35,7 +35,7 @@ int _atoi(char *s)
 
 		if (!isdigit(*(s + i + 1)))
 		{
-			if (!(number < 0) && sign_for_number == '-')
+			if (sign_for_number == '-')
 				number *= -1;
 
 			break;
