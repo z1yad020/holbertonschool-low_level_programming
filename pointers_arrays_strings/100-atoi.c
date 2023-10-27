@@ -15,14 +15,14 @@ int _atoi(char *s)
 	int i = 0;
 	unsigned int number = 0;
 
-	char sign_for_number;
+	int sign_for_number = 1;
 
 	while (*(s + i))
 	{
 		if (!isdigit(*(s + i)))
 		{
 			if (i != 0 && *(s + i) == '-')
-				sign_for_number = '-';
+				sign_for_number *= -1;
 
 			i++;
 			continue;
