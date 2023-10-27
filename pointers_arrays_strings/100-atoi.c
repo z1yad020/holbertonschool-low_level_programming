@@ -13,7 +13,7 @@
 int _atoi(char *s)
 {
 	int i = 0;
-	unsigned number = 0;
+	unsigned int number = 0;
 
 	char sign_for_number;
 
@@ -26,7 +26,7 @@ int _atoi(char *s)
 		}
 
 
-		if (i != 0 && *(s + i - 1) == '-')
+		if (*(s + i) == '-')
 			sign_for_number = '-';
 
 
