@@ -34,14 +34,11 @@ int _atoi(char *s)
 
 		if (!isdigit(*(s + i + 1)))
 		{
-			if (sign_for_number == '-')
-				number *= -1;
-
 			break;
 		}
 
 		i++;
 	}
 
-	return (number);
+	return (number * sign_for_number);
 }
