@@ -12,7 +12,8 @@
 
 int _atoi(char *s)
 {
-	int i = 0, number = 0;
+	int i = 0;
+	unsigned number = 0;
 
 	char sign_for_number;
 
