@@ -21,13 +21,12 @@ int _atoi(char *s)
 	{
 		if (!isdigit(*(s + i)))
 		{
+			if (i != 0 && *(s + i) == '-')
+				sign_for_number = '-';
+
 			i++;
 			continue;
 		}
-
-
-		if (*(s + i) == '-')
-			sign_for_number = '-';
 
 
 		number = number * 10 + (*(s + i) - 48);
