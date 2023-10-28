@@ -29,9 +29,9 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		while (*(src + j))
 		{
-			*(dest + i++) = *(src + j++);
 			if (j == n)
 				break;
+			*(dest + i++) = *(src + j++);
 		}
 	}
 
