@@ -17,6 +17,8 @@ char *cap_string(char *str)
 
 	int i = 0, j;
 
+	str[0] = toupper(str[0]);
+
 	while (*(str + i))
 	{
 		j = 0;
