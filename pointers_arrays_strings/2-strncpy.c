@@ -13,7 +13,7 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int sizesrc = 0, sizedest = 0, i = 0, j = 0;
+	int sizesrc = 0, sizedest = 0, i = 0, j = 0, x;
 
 	while (*(src + sizesrc++))
 	{}
@@ -24,6 +24,11 @@ char *_strncpy(char *dest, char *src, int n)
 	if (sizesrc > n && n > sizedest)
 		dest[n] = '\0';
 
+
+	x = sizedest + 1;
+	if (n > sizesrc && n > sizedest)
+		while (x <= n)
+			*(dest + x++) = '\0';
 
 	if (n >= sizesrc)
 		while (i < sizesrc)
