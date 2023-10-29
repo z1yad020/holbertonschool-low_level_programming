@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include "main.h"
 #include <ctype.h>
+#include <stdbool.h>
+
 /**
  * _strchr - locates a character in a string
  * @s: string
