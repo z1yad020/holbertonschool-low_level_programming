@@ -1,8 +1,9 @@
+#include <string.h>
 #include <stdio.h>
 #include "main.h"
 #include <ctype.h>
 /**
- * memset - memomry set
+ * _memset - memory set
  * @s: string
  * @b: character
  * @n: length
