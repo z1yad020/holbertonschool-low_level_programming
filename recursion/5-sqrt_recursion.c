@@ -17,6 +17,7 @@ int func_for_count(int n, int x)
 		return (-1);
 
 	func_for_count(n, x + 1);
+	return (0);
 }
 
 /**
