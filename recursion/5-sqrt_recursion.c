@@ -16,8 +16,7 @@ int func_for_count(int n, int x)
 	else if (x * x > n)
 		return (-1);
 
-	func_for_count(n, x + 1);
-	return (0);
+	return(func_for_count(n, x + 1));
 }
 
 /**
