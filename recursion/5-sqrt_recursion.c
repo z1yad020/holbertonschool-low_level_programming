@@ -16,7 +16,7 @@ int func_for_count(int n, int x)
 	else if (x * x > n)
 		return (-1);
 
-	f(n, x + 1);
+	func_for_count(n, x + 1);
 }
 
 /**
@@ -31,5 +31,5 @@ int _sqrt_recursion(int n)
 	if (n < 0)
 		return (-1);
 
-	return (f(n, 0));
+	return (func_for_count(n, 0));
 }
