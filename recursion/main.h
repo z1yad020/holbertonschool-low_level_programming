@@ -1,3 +1,4 @@
+double sqrt(double arg);
 int _putchar(char);
 int func_for_count(int n, int x);
 void _puts_recursion(char *s);
