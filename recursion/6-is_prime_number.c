@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "main.h"
-
+#include <math.h>
 /**
  * func_for_count - another function for help
  * @n: number
