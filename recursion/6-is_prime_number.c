@@ -11,7 +11,7 @@
  */
 int func_for_count(int n, int x)
 {
-	if (x > sqrt(n) || !(n % x))
+	if ((x > n / 2) || !(n % x))
 		return (0);
 	else if (n % x)
 		return (1);
