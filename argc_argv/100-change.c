@@ -58,7 +58,7 @@ int answer(int cents, int coins[5])
 		if (!cents)
 			return (sum);
 	}
-	return (1);
+	return (0);
 }
 
 
