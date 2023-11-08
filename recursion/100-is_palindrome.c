@@ -34,6 +34,6 @@ int check_palindrome(const char *s, int index)
 	if ((s == s + index - 1 || s == s + index))
 		return (1);
 
-	check_palindrome(s + 1, index - 2);
+	return (check_palindrome(s + 1, index - 2));
 
 }
