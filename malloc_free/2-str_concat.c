@@ -30,7 +30,8 @@ char *str_concat(char *s1, char *s2)
 		if (!(*(s2 + s2i++)))
 			break;
 
-	s3i = s1i + s2i - 1;
+	s1i--;
+	s3i = s1i + s2i;
 
 	s3 = (char *)malloc(s3i * sizeof(char));
 
