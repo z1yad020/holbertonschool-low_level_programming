@@ -32,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 
 	s3i = s1i + s2i - 1;
 
-	s3 = (char *)malloc(s3i * sizeof(*s1));
+	s3 = (char *)malloc(s3i * sizeof(char));
 
 	if (!s3)
 		return (NULL);
