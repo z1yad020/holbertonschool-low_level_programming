@@ -20,9 +20,8 @@ char *_strdup(char *str)
 
 	while (1)
 	{
-		if (!(*(str + i)))
+		if (!(*(str + i++)))
 			break;
-		i++;
 	}
 
 	arr = (char *)malloc(i * sizeof(*str));
