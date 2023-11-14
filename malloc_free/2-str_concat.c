@@ -17,10 +17,10 @@ char *str_concat(char *s1, char *s2)
 	unsigned int s1i = 0, s2i = 0, s3i, i;
 
 	if (!s1)
-		*s1 = "";
+		s1 = "";
 
 	if (!s2)
-		*s2 = "";
+		s2 = "";
 
 	while (1)
 		if (!(*(s1 + s1i++)))
