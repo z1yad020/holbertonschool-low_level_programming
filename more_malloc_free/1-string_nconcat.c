@@ -40,8 +40,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	s3 = (char *)malloc(s3i * sizeof(char));
 
 	if (!s3)
+	{
+		free(s3);
 		return (NULL);
-
+	}
 
 	for (i = 0; i < s1i; i++)
 		*(s3 + i) = *(s1 + i);
