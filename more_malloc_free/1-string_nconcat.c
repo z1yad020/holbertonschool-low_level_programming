@@ -31,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		if (!(*(s2 + s2i++)))
 			break;
 
-	if (s2i - 1 < n)
+	if (s2i < n)
 		n = s2i;
 
 	s1i--;
