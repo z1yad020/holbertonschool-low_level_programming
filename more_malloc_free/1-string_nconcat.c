@@ -31,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		if (!(*(s2 + s2i++)))
 			break;
 
-	if (s2i < n)
+	if (s2i - 1 < n)
 		n = s2i;
 
 	s1i--;
@@ -49,6 +49,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (; i < s3i; i++)
 		*(s3 + i) = *(s2 + j++);
 
+	*(s3 + i) = '\0';
 	return (s3);
-
 }
