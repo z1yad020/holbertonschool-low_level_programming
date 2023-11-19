@@ -1,6 +1,6 @@
 #ifndef __FILE_NAME__
 #define __FILE_NAME__
-#include <math.h>
-#define ABS(X) abs(x)
+#include <stdlib.h>
+#define ABS(x) (abs(x))
 
 #endif
