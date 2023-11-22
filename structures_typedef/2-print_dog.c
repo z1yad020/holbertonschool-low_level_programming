@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stdio.h>
 
 /**
  * print_dog - A dog will teach you unconditional love. If you can have that in
@@ -10,7 +11,7 @@
 void print_dog(struct dog *d)
 {
 	if (!d)
-		return (1);
+		return;
 
 	if (!(d->name) || !(d->age) || !(d->owner))
 	{
