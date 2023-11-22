@@ -5,7 +5,6 @@
 
 /**
  * new_dog - A door is what a dog is perpetually on the wrong side of
- * @d: dog
  * @name: Name
  * @age: Age
  * @owner: Owner
@@ -33,8 +32,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	strcpy (ndog->name, name);
-	strcpy (ndog->owner, owner);
+	strcpy(ndog->name, name);
+	strcpy(ndog->owner, owner);
 	ndog->age = age;
 
 	return (ndog);
