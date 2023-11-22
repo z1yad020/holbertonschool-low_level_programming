@@ -1,6 +1,7 @@
 #include "dog.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 /**
  * new_dog - A door is what a dog is perpetually on the wrong side of
