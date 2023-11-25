@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
-	printf("%d\n", strlen(argv[2]));
+	printf("%d\n", (int)strlen(argv[2]));
 	if (strlen(argv[2]) != 1 && strlen(argv[2]) != 3)
 	{
 		printf("Error\n");
