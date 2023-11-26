@@ -11,11 +11,13 @@
  */
 void print_all(const char * const format, ...)
 {
-	const size_t size = strlen(format);
-	size_t i = 0;
+	size_t size, i = 0;
 	const char *formatcp = format, *str;
 	va_list ap;
 
+	if (!format)
+		return;
+	size = strlen(format);
 	va_start(ap, format);
 	while (format && i < size)
 	{
