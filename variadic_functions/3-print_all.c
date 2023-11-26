@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 {
 	const size_t size = strlen(format);
 	size_t i = 0;
-	char *formatcp = format, *str;
+	const char *formatcp = format, *str;
 	va_list ap;
 
 	va_start(ap, format);
