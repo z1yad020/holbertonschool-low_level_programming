@@ -13,13 +13,11 @@ void print_all(const char * const format, ...)
 {
 	const size_t size = strlen(format);
 	size_t i = 0;
-	char *formatcp = malloc(size);
-	char *str;
+	char *formatcp = format, *str;
 	va_list ap;
 
-	strcpy(formatcp, format);
 	va_start(ap, format);
-	while (format != NULL && i < size)
+	while (format && i < size)
 	{
 		switch (*(formatcp++))
 		{
@@ -50,5 +48,4 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
-	free(formatcp);
 }
