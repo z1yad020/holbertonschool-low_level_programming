@@ -1,6 +1,5 @@
 #include <stdarg.h>
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 
 /**
@@ -22,7 +21,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		str = va_arg(ap, char *);
 
-		if (!strcmp(str, "(NULL)"))
+		if (!str)
 			printf("(nil)");
 		else
 			printf("%s", str);
