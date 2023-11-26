@@ -15,12 +15,10 @@ void print_all(const char * const format, ...)
 	const char *formatcp = format, *str;
 	va_list ap;
 
-	if (!format)
-		return;
-	size = strlen(format);
 	va_start(ap, format);
 	while (format && i < size)
 	{
+		size = strlen(format);
 		switch (*(formatcp++))
 		{
 		case 'c':
