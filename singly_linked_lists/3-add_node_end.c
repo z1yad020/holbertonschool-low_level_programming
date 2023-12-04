@@ -27,7 +27,10 @@ list_t *add_node_end(list_t **head, const char *str)
 	newNode->len = strlen(newNode->str);
 	newNode->next = NULL;
 
-	lastNode(*head)->next = newNode;
+	if (*head)
+		lastNode(*head)->next = newNode;
+	else
+		*head = newNode;
 
 	return (newNode);
 }
@@ -40,7 +43,7 @@ list_t *add_node_end(list_t **head, const char *str)
  */
 listPtr lastNode(listPtr head)
 {
-	if (head->next)
-		lastNode(head->next);
-	return (head);
+	if (!head->next)
+		return (head);
+	lastNode(head->next);
 }
