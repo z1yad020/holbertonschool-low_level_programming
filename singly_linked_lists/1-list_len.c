@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_list - print size of linked list
+ * list_len - print size of linked list
  * @h: pointer to list (head)
  *
  * Return: size of list
