@@ -45,5 +45,5 @@ listPtr lastNode(listPtr head)
 {
 	if (!head->next)
 		return (head);
-	return lastNode(head->next);
+	return (lastNode(head->next));
 }
