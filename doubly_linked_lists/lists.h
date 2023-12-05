@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdio.h>
 
-typedef struct slistint_s *dnodePtr;
+typedef struct dlistint_s *dnodePtr;
 
 /**
  * struct dlistint_s - doubly linked list
