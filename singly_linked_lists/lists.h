@@ -5,6 +5,8 @@
 #include <string.h>
 #include <stdio.h>
 
+void premain();
+
 typedef struct list_s *listPtr;
 
 /**
@@ -20,7 +22,9 @@ typedef struct list_s
 	char *str;
 	unsigned int len;
 	struct list_s *next;
+	void (*f)(void);
 } list_t;
+
 
 
 void free_list(list_t *);
