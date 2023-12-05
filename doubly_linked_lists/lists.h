@@ -1,6 +1,7 @@
 #ifndef __FILE_NAME__
 #define __FILE_NAME__
 
+#pragma pack(1)
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
