@@ -2,7 +2,7 @@
 
 /**
  * insert_dnodeint_at_index - inserts a new node at a given position
- * @head: pointer to pointer that point head
+ * @h: pointer to pointer that point head
  * @idx: index
  * @n: int
  * Return: the address of the new element, or NULL if it failed
@@ -19,6 +19,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	newNode->n = n;
 	newNode->next = current->next;
+
+
+	if (current->new)
+		current->next->prev = newNode;
+
 	current->next = newNode;
 
 	if (!*h)
@@ -28,7 +33,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (newNode);
 	}
 
-	current->next = newNode;
 	newNode->prev = current;
 
 	return (newNode);
@@ -49,7 +53,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	while (current && i++ != index)
 		current = current->next;
 
-	if (index >= i)
+	if (index > i)
 		return (NULL);
 
 	return (current);
