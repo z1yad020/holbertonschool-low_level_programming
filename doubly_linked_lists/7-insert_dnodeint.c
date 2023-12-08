@@ -9,62 +9,29 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dnodePtr newNode, current;
+	dnodePtr current = *h, newNode;
 
-	newNode = malloc(sizeof(dlistint_t));
+	if (!idx)
+		return (add_dnodeint(h, n));
 
-	if (!*h && !idx && newNode)
+	for (; idx != 1; idx--)
 	{
-		*h = newNode;
-		newNode->n = n;
-		newNode->next = NULL;
-		newNode->prev = NULL;
-		return (newNode);
+		current = current->next;
+		if (!current)
+			return (NULL);
 	}
 
-	current = get_dnodeint_at_index(*h, idx);
+	if (!current->next)
+		return (add_dnodeint_end(h, n));
 
-	if (!newNode || !h || !current)
+	new = malloc(sizeof(dlistint_t));
+	if (!newNode)
 		return (NULL);
-
-	if(!idx)
-		return(add_dnodeint(h, n));
 
 	newNode->n = n;
-	newNode->next = current;
-
-	current->prev->next = newNode;
-
-	if (!*h)
-	{
-		newNode->prev = NULL;
-		*h = newNode;
-		return (newNode);
-	}
-
-	newNode->prev = current->prev;
-	current->prev = newNode;
-
+	newNode->prev = current;
+	newNode->next = current->next;
+	current->next->prev = newNode;
+	current->next = newNode;
 	return (newNode);
-}
-
-
-/**
- * get_dnodeint_at_index - nth node of a linked list
- * @head: pointer to pointer that point to head
- * @index: index
- * Return: point to nth node
- */
-dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
-{
-	dnodePtr current = head;
-	size_t i = 0;
-
-	while (current && i++ != index)
-		current = current->next;
-
-	if (index > i)
-		return (NULL);
-
-	return (current);
 }
