@@ -12,6 +12,15 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dnodePtr newNode, current;
 
 	newNode = malloc(sizeof(dlistint_t));
+
+	if (!*h && !idx && newNode)
+	{
+		*h = newNode;
+		newNode->next = NULL;
+		newNode->prev = NULL;
+		return (newNode);
+	}
+
 	current = get_dnodeint_at_index(*h, idx);
 
 	if (!newNode || !h || !current)
