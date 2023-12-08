@@ -38,4 +38,5 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	remNode->prev->next = remNode->next;
 	remNode->next->prev = remNode->prev;
 	free(remNode);
+	return (1);
 }
