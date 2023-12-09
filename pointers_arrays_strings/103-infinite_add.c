@@ -45,7 +45,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	if (remain && size_r)
 		r[size_r-- - 1] = '1';
-	else
+	else if (!remain && size_r)
 		return (0);
 	return (r + size_r);
 }
