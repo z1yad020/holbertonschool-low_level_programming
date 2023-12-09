@@ -1,7 +1,7 @@
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "main.h"
 
 /**
  * dgt - recursive digit printer
@@ -23,7 +23,7 @@ void dgt(unsigned int x)
  */
 void print_number(int n)
 {
-	unsigned int x = (unsigned int)n, temp;
+	unsigned int x = (unsigned int)n;
 
 	if (n < 0)
 		_putchar('-');
