@@ -23,10 +23,15 @@ void dgt(unsigned int x)
  */
 void print_number(int n)
 {
-	unsigned int x = (unsigned int)n;
+	unsigned int x;
 
 	if (n < 0)
+	{
 		_putchar('-');
+		x = -n
+	}
+	else
+		x = n;
 
 	dgt(x);
 }
