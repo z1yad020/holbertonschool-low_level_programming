@@ -26,3 +26,4 @@ char *_strstr(char *, char *);
 void print_chessboard(char (*)[8]);
 void print_diagsums(int *, int);
 void set_string(char **s, char *to);
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
