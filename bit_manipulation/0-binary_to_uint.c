@@ -13,7 +13,8 @@ double _pow(double base, double exp)
 {
 	long double result = 1.0;
 
-	while (exp != 0) {
+	while (exp != 0)
+	{
 		result *= base;
 		--exp;
 	}
