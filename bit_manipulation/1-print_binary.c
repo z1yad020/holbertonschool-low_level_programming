@@ -8,7 +8,7 @@
  * @n: number in decimal
  * Return: void
  */
-void print_binary(unsigned long int n);
+void print_binary(unsigned long int n)
 {
 	int i = 10;
 	short chck = 0;
