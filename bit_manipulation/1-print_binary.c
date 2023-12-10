@@ -10,7 +10,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i = 96;
+	int i = 65;
 	short chck = 0;
 	unsigned int x;
 
