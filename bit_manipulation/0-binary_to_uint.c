@@ -1,8 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
 #include "main.h"
+
+/**
+ * _pow - manual power function
+ * @base: base
+ * @exp: power
+ * Return: power of base
+ */
+double _pow(double base, double exp)
+{
+	long double result = 1.0;
+
+	while (exp != 0) {
+		result *= base;
+		--exp;
+	}
+	return (result);
+}
+
 
 /**
  * binary_to_uint - converts a binary number to an unsigned int
@@ -23,7 +40,7 @@ unsigned int binary_to_uint(const char *b)
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
 
-		x += (b[i] - '0') * pow(2, j++);
+		x += (b[i] - '0') * _pow(2, j++);
 	}
 	return (x);
 }
