@@ -42,7 +42,7 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 
 		if (b[i] - '0')
-			x += 1 * pow(2, j++);
+			x += 1 * _pow(2, j++);
 	}
 	return (x);
 }
