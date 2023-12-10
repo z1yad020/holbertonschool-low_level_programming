@@ -1,6 +1,8 @@
 #ifndef __FILE_NAME__
 #define __FILE_NAME__
 
+
+int get_endianness(void);
 double _pow(double, double);
 unsigned int binary_to_uint(const char *b);
 void print_binary(unsigned long int n);
