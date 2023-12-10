@@ -40,7 +40,8 @@ unsigned int binary_to_uint(const char *b)
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
 
-		x += (b[i] - '0') * _pow(2, j++);
+		if (b[i] - '0')
+			x += 1 * pow(2, j++);
 	}
 	return (x);
 }
