@@ -24,7 +24,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	lenbuff = read(fd_file, buff, letters);
 
-	if (lenbuff < 1 || letters > 2000)
+	if (lenbuff < 1 || lenbuff > 2000)
 		goto finish;
 
 	lenbuff = write(STDOUT_FILENO, buff, lenbuff);
