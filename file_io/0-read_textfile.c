@@ -13,7 +13,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char *buff = calloc(sizof(char) * 2000);
+	char *buff = calloc(2000, sizeof(char));
 	int fd_file;
 	size_t lenbuff;
 
