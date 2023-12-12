@@ -13,33 +13,31 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char buff[1024];
+	char *buff = calloc(sizof(char) * 2000);
 	int fd_file;
 	size_t lenbuff;
 
 	fd_file = open(filename, O_RDONLY);
 
 	if (fd_file < 0 || !filename)
-	{
-		close(fd_file);
-		return (0);
-	}
+		goto finish;
 
 	lenbuff = read(fd_file, buff, letters);
 
-	if (lenbuff < 1)
-	{
-		close(fd_file);
-		return (0);
-	}
+	if (lenbuff < 1 || letters > 2000)
+		goto finish;
 
 	lenbuff = write(STDOUT_FILENO, buff, lenbuff);
+
 	if (lenbuff < 1)
-	{
-		close(fd_file);
-		return (0);
-	}
+		goto finish;
 
 	close(fd_file);
+	free(buff);
 	return (lenbuff);
+
+finish:
+	close(fd_file);
+	free(buff);
+	return (0);
 }
