@@ -29,18 +29,6 @@ void exitstatus(char **argv,
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-
-	if (close(fd_ffrom))
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_ffrom);
-		exit(100);
-	}
-
-	if (close(fd_fto))
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_fto);
-		exit(100);
-	}
 }
 
 /**
@@ -60,6 +48,7 @@ int main(int argc, char **argv)
 		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 28);
 		exit(97);
 	}
+
 	fd_ffrom = open(argv[1], O_RDONLY);
 	fd_fto = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 
@@ -69,6 +58,19 @@ int main(int argc, char **argv)
 		writetext = write(fd_fto, buff, readtext);
 		exitstatus(argv, fd_ffrom, fd_fto, readtext, writetext);
 	}
+
+	if (close(fd_ffrom))
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_ffrom);
+		exit(100);
+	}
+
+	if (close(fd_fto))
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_fto);
+		exit(100);
+	}
+
 
 	return (0);
 }
