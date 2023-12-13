@@ -31,12 +31,16 @@ void exitstatus(char **argv,
 	}
 
 	if (close(fd_ffrom))
+	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_ffrom);
+		exit(100);
+	}
 
 	if (close(fd_fto))
+	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_fto);
-
-	exit(100);
+		exit(100);
+	}
 }
 
 /**
