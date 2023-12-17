@@ -26,7 +26,6 @@ void dltlist(hash_node_t *tmp)
  */
 void hash_table_delete(hash_table_t *ht)
 {
-	hash_node_t *tmp;
 	unsigned long int node_idx;
 
 	if (!ht)
