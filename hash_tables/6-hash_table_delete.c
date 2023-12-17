@@ -32,6 +32,11 @@ void hash_table_delete(hash_table_t *ht)
 		return;
 
 	for (node_idx = 0; node_idx < ht->size; node_idx++)
-		dltlist(ht->array[node_idx]);
+	{
+		if (ht->array[node_idx])
+			dltlist(ht->array[node_idx]);
+		else
+			free(ht->array[node_idx]);
+	}
 	free(ht);
 }
