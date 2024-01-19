@@ -4,7 +4,7 @@
 void
 print_arr(int *array, int left, int right)
 {
-	size_t i = left;
+	int i = left;
 
 	while (array && i <= right)
 	{
@@ -37,6 +37,6 @@ b_search(int *array, int left, int right, int value)
 int
 binary_search(int *array, size_t size, int value)
 {
-	b_search(array, 0, size, value);
+	return (b_search(array, 0, size, value));
 }
 
