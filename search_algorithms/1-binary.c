@@ -24,6 +24,7 @@ b_search(int *array, int left, int right, int value)
 	if (left > right)
 		return (-1);
 
+	printf("Searching in array: ");
 	print_arr(array, left, right);
 	if (array[mid] == value)
 		return (mid);
